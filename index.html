@@ -10,6 +10,8 @@
     <body>
         <form>
             <input type="text" name="input" id="input" autofocus  class="text" style="width:100%;">
+            <input type="reset" value="reset" class="text">
+
         </form>
         <button onclick="а()" class="text">а</button>
         <button onclick="б()"  class="text">б</button>
@@ -51,11 +53,21 @@
         <button onclick="ѣ()" class="text">ѣ</button>
         <button onclick="ѳ()" class="text">ѳ</button>
         <button onclick="ѵ()" class="text">ѵ</button>
+        <br>
+        <button id="copy" name="copy" class="text">Copy Text</button>
+
 
 
     </body>
 
     <script>
+        function copy() {
+            var copyText = document.querySelector("#input");
+            copyText.select();
+            document.execCommand("copy");
+        }
+
+        document.querySelector("#copy").addEventListener("click", copy);
         //абвгдеёжзийк
         //лмно
         //прстуфх
